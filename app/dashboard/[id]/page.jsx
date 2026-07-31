@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import Sidebar from '@/components/layout/Sidebar';
 import Topbar from '@/components/layout/Topbar';
 import InnovationScore from '@/components/sections/InnovationScore';
+import EvaluationEngine from '@/components/sections/EvaluationEngine';
+import AIReasoningProcess from '@/components/sections/AIReasoningProcess';
 import IdeaValidation from '@/components/sections/IdeaValidation';
 import DeepResearch from '@/components/sections/DeepResearch';
 import ResearchGaps from '@/components/sections/ResearchGaps';
@@ -21,16 +23,14 @@ import { SkeletonCard, FadeIn } from '@/components/ui';
 function DashboardSkeleton() {
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <SkeletonCard />
-        <SkeletonCard />
-      </div>
+      <SkeletonCard />
       <SkeletonCard />
       <SkeletonCard />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <SkeletonCard />
         <SkeletonCard />
       </div>
+      <SkeletonCard />
     </div>
   );
 }
@@ -102,58 +102,71 @@ export default function DashboardPage() {
             <DashboardSkeleton />
           ) : project ? (
             <>
-              {/* Row 1: Innovation Score + Idea Validation */}
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                <FadeIn delay={0.05}>
-                  <InnovationScore innovationScore={project.innovationScore} />
-                </FadeIn>
-                <FadeIn delay={0.1}>
-                  <IdeaValidation validation={project.validation} />
-                </FadeIn>
-              </div>
+              {/* AI Consensus Score — full width analytics panel */}
+              <FadeIn delay={0.05}>
+                <InnovationScore
+                  innovationScore={project.innovationScore}
+                  evaluation={project.evaluation}
+                />
+              </FadeIn>
+
+              {/* AI Evaluation Engine — 5 evaluator cards */}
+              <FadeIn delay={0.1}>
+                <EvaluationEngine evaluation={project.evaluation} />
+              </FadeIn>
+
+              {/* AI Reasoning Process — positive/critical/confidence/risks/opportunities */}
+              <FadeIn delay={0.15}>
+                <AIReasoningProcess evaluation={project.evaluation} />
+              </FadeIn>
+
+              {/* Idea Validation */}
+              <FadeIn delay={0.18}>
+                <IdeaValidation validation={project.validation} />
+              </FadeIn>
 
               {/* Deep Research */}
-              <FadeIn delay={0.15}>
+              <FadeIn delay={0.2}>
                 <DeepResearch research={project.research} />
               </FadeIn>
 
               {/* Research Gaps */}
-              <FadeIn delay={0.18}>
+              <FadeIn delay={0.22}>
                 <ResearchGaps gaps={project.gaps} />
               </FadeIn>
 
               {/* Architecture Diagram */}
-              <FadeIn delay={0.2}>
+              <FadeIn delay={0.24}>
                 <ArchitectureDiagram architecture={project.architecture} />
               </FadeIn>
 
               {/* Tech Stack */}
-              <FadeIn delay={0.22}>
+              <FadeIn delay={0.26}>
                 <TechStack techStack={project.techStack} />
               </FadeIn>
 
               {/* Row: GitHub + APIs */}
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                <FadeIn delay={0.25}>
+                <FadeIn delay={0.28}>
                   <GitHubRepos github={project.github} />
                 </FadeIn>
-                <FadeIn delay={0.28}>
+                <FadeIn delay={0.3}>
                   <UsefulAPIs apis={project.apis} />
                 </FadeIn>
               </div>
 
               {/* Datasets */}
-              <FadeIn delay={0.3}>
+              <FadeIn delay={0.32}>
                 <Datasets datasets={project.datasets} />
               </FadeIn>
 
               {/* Sprint Roadmap */}
-              <FadeIn delay={0.32}>
+              <FadeIn delay={0.34}>
                 <SprintRoadmap roadmap={project.roadmap} />
               </FadeIn>
 
               {/* Documentation */}
-              <FadeIn delay={0.35}>
+              <FadeIn delay={0.36}>
                 <Documentation documentation={project.documentation} projectTitle={project.title} />
               </FadeIn>
             </>
