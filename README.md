@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MaestroMeets
 
-## Getting Started
+**Search Less. Solve More.**
 
-First, run the development server:
+AI-powered Research & Innovation Copilot that converts a simple project idea into an implementation-ready project.
 
+## Setup
+
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configure Environment Variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a `.env.local` file in the root:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+MONGODB_URI=your_mongodb_connection_string_here
+```
 
-## Learn More
+- **GEMINI_API_KEY** — Get from [Google AI Studio](https://aistudio.google.com/apikey)
+- **MONGODB_URI** — Get from [MongoDB Atlas](https://cloud.mongodb.com)
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Run Development Server
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- 🎯 **Idea Validation** — AI-powered viability assessment
+- 📊 **Innovation Score** — Novelty, feasibility, market demand
+- 🔬 **Deep Research** — Market analysis, existing solutions, trends
+- 💡 **Research Gaps** — Identified opportunities and innovations
+- 🏗️ **Architecture Diagram** — Auto-generated Mermaid.js diagrams
+- ⚡ **Tech Stack** — Curated technology recommendations
+- 🐙 **GitHub Repos** — Relevant open-source projects
+- 🔗 **Useful APIs** — Third-party services to use
+- 📦 **Datasets** — Training and validation data sources
+- 🗓️ **Sprint Roadmap** — 4-week implementation plan
+- 📄 **Documentation** — README, API docs, folder structure, future scope
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework** — Next.js 16 (App Router)
+- **Styling** — TailwindCSS v4
+- **AI** — Google Gemini API
+- **Database** — MongoDB Atlas + Mongoose
+- **Animations** — Framer Motion
+- **Charts** — Recharts
+- **Diagrams** — Mermaid.js
+- **Icons** — Lucide React
