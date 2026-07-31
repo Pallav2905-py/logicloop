@@ -1,4 +1,6 @@
-/**
+import os
+
+content = """/**
  * pitchDeckPrompt.js
  *
  * Builds the Gemini prompt that produces STRICT JSON for the pitch deck.
@@ -149,3 +151,8 @@ EXPECTED JSON SCHEMA:
 }
 `;
 }
+"""
+
+with open('lib/pitchDeckPrompt.js', 'w') as f:
+    f.write(content)
+print("Updated lib/pitchDeckPrompt.js")

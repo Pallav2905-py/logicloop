@@ -1,4 +1,6 @@
-/**
+import os
+
+content = """/**
  * pptxBuilder.js
  *
  * Generates a McKinsey-style premium investor pitch deck using pptxgenjs.
@@ -68,7 +70,7 @@ export async function generatePitchDeck(project, deckJson) {
   
   // Placeholder for AI Image
   s1.addShape(pptx.ShapeType.rect, { x: 5.5, y: 1.5, w: 4, h: 4.5, fill: { color: COLORS.surfaceHighlight } });
-  s1.addText('AI GENERATED\\nVISUALIZATION', { x: 5.5, y: 1.5, w: 4, h: 4.5, align: 'center', color: COLORS.textMuted, fontSize: 12 });
+  s1.addText('AI GENERATED\nVISUALIZATION', { x: 5.5, y: 1.5, w: 4, h: 4.5, align: 'center', color: COLORS.textMuted, fontSize: 12 });
 
   // ---------------------------------------------------------
   // SLIDE 2: PROBLEM
@@ -317,3 +319,8 @@ export async function generatePitchDeck(project, deckJson) {
   const buffer = await pptx.write('arraybuffer');
   return buffer;
 }
+"""
+
+with open('lib/pptxBuilder.js', 'w') as f:
+    f.write(content)
+print("Updated lib/pptxBuilder.js")

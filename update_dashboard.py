@@ -1,4 +1,6 @@
-'use client';
+import os
+
+content = """'use client';
 
 import { useState, useEffect } from 'react';
 import {
@@ -398,3 +400,8 @@ export default function DecisionIntelligenceDashboard({ project }) {
     </div>
   );
 }
+"""
+
+with open('components/sections/DecisionIntelligenceDashboard.jsx', 'w') as f:
+    f.write(content)
+print("Updated components/sections/DecisionIntelligenceDashboard.jsx")

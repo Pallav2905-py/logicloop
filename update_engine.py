@@ -1,4 +1,6 @@
-/**
+import os
+
+content = """/**
  * decisionEngine.js
  *
  * Transforms AI research data into executive business intelligence & analytics.
@@ -194,3 +196,8 @@ export function calculateDecisionAnalytics(project) {
     investmentReadiness
   };
 }
+"""
+
+with open('lib/decisionEngine.js', 'w') as f:
+    f.write(content)
+print("Updated lib/decisionEngine.js")

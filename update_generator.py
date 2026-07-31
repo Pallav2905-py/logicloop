@@ -1,4 +1,6 @@
-'use client';
+import os
+
+content = """'use client';
 
 import { useState, useEffect } from 'react';
 import { Card, Badge, FadeIn, Button } from '@/components/ui';
@@ -205,3 +207,8 @@ export default function PitchDeckGenerator({ project }) {
     </div>
   );
 }
+"""
+
+with open('components/sections/PitchDeckGenerator.jsx', 'w') as f:
+    f.write(content)
+print("Updated components/sections/PitchDeckGenerator.jsx")
