@@ -117,16 +117,18 @@ export function SectionHeader({ icon: Icon, title, description, badge }) {
 }
 
 // ── FadeIn ────────────────────────────────────────────────────────────────────
-export function FadeIn({ children, delay = 0, className = '' }) {
+export function FadeIn({ children, delay = 0, className = '', as = 'div', ...props }) {
+  const Component = motion[as] || motion.div;
   return (
-    <motion.div
+    <Component
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay, ease: 'easeOut' }}
       className={className}
+      {...props}
     >
       {children}
-    </motion.div>
+    </Component>
   );
 }
 

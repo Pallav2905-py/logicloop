@@ -38,34 +38,37 @@ export default function GitHubRepos({ github }) {
           </thead>
           <tbody className="divide-y divide-[#F1F5F9]">
             {github.map((repo, i) => (
-              <FadeIn key={i} delay={i * 0.06}>
-                <tr className="hover:bg-[#F8FAFC] transition-colors group">
-                  <td className="py-3.5 px-2">
-                    <div className="flex items-center gap-2">
-                      <GithubIcon className="w-4 h-4 text-[#94A3B8] flex-shrink-0" />
-                      <span className="font-medium text-[#0F172A]">{repo.name}</span>
-                    </div>
-                  </td>
-                  <td className="py-3.5 px-2 text-[#475569] max-w-xs">
-                    <span className="line-clamp-2">{repo.description}</span>
-                  </td>
-                  <td className="py-3.5 px-2 text-right">
-                    <div className="flex items-center justify-end gap-1 text-[#F59E0B]">
-                      <Star className="w-3.5 h-3.5 fill-current" />
-                      <span className="font-medium text-[#475569]">{repo.stars}</span>
-                    </div>
-                  </td>
-                  <td className="py-3.5 px-2 text-right">
-                    <a
-                      href={repo.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[#2563EB] hover:text-[#1D4ED8] font-medium text-xs"
-                    >
-                      View <ExternalLink className="w-3 h-3" />
-                    </a>
-                  </td>
-                </tr>
+              <FadeIn
+                key={i}
+                delay={i * 0.06}
+                as="tr"
+                className="hover:bg-[#F8FAFC] transition-colors group"
+              >
+                <td className="py-3.5 px-2">
+                  <div className="flex items-center gap-2">
+                    <GithubIcon className="w-4 h-4 text-[#94A3B8] flex-shrink-0" />
+                    <span className="font-medium text-[#0F172A]">{repo.name}</span>
+                  </div>
+                </td>
+                <td className="py-3.5 px-2 text-[#475569] max-w-xs">
+                  <span className="line-clamp-2">{repo.description}</span>
+                </td>
+                <td className="py-3.5 px-2 text-right">
+                  <div className="flex items-center justify-end gap-1 text-[#F59E0B]">
+                    <Star className="w-3.5 h-3.5 fill-current" />
+                    <span className="font-medium text-[#475569]">{repo.stars}</span>
+                  </div>
+                </td>
+                <td className="py-3.5 px-2 text-right">
+                  <a
+                    href={repo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[#2563EB] hover:text-[#1D4ED8] font-medium text-xs"
+                  >
+                    View <ExternalLink className="w-3 h-3" />
+                  </a>
+                </td>
               </FadeIn>
             ))}
           </tbody>
