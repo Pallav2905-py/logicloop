@@ -20,6 +20,7 @@ import SprintRoadmap from '@/components/sections/SprintRoadmap';
 import Documentation from '@/components/sections/Documentation';
 import PitchDeckGenerator from '@/components/sections/PitchDeckGenerator';
 import DecisionIntelligenceDashboard from '@/components/sections/DecisionIntelligenceDashboard';
+import AIPitchStudio from '@/components/sections/AIPitchStudio';
 import { SkeletonCard, FadeIn } from '@/components/ui';
 import { LayoutDashboard, FileCode2, BarChart2 } from 'lucide-react';
 
@@ -134,6 +135,11 @@ export default function DashboardPage() {
             <DashboardSkeleton />
           ) : project ? (
             <>
+              {/* AI Pitch Studio — Always Accessible (Flagship Feature) */}
+              <FadeIn delay={0.01}>
+                <AIPitchStudio project={project} />
+              </FadeIn>
+
               {/* Pitch Deck Generator Always Accessible */}
               <FadeIn delay={0.02}>
                 <PitchDeckGenerator project={project} />

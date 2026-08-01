@@ -14,6 +14,12 @@ const nextConfig = {
       { protocol: 'https', hostname: '**' },
     ],
   },
+  serverExternalPackages: ['fluent-ffmpeg', 'ffmpeg-static', 'sharp'],
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '50mb',
+    },
+  },
 };
 
 export default nextConfig;
