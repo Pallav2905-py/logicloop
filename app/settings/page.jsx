@@ -110,7 +110,7 @@ export default function SettingsPage() {
               <SectionHeader
                 icon={ShieldCheck}
                 title="Hackathon MVP Credentials"
-                description="MaestroMeets system release version"
+                description="IntelliGrade AI system release version"
               />
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">

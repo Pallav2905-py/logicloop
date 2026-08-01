@@ -62,7 +62,7 @@ export default function HeroPage() {
             <div className="w-7 h-7 bg-[#0F172A] rounded-lg flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-[#0F172A] tracking-tight">MaestroMeets</span>
+            <span className="font-bold text-[#0F172A] tracking-tight">IntelliGrade AI</span>
           </div>
           <div className="flex items-center gap-4">
             <a href="/projects" className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors font-medium">
@@ -104,9 +104,9 @@ export default function HeroPage() {
             transition={{ duration: 0.5, delay: 0.05 }}
             className="text-5xl sm:text-6xl font-extrabold text-[#0F172A] leading-tight tracking-tight mb-4"
           >
-            Search Less.
+            IntelliGrade AI
             <br />
-            <span className="text-[#2563EB]">Solve More.</span>
+            <span className="text-[#2563EB]">Think Bigger. Research Faster. Innovate Smarter.</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -116,8 +116,8 @@ export default function HeroPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-[#475569] leading-relaxed mb-10 max-w-xl mx-auto"
           >
-            Turn any project idea into an implementation-ready solution — complete with research,
-            architecture, tech stack, and a sprint roadmap.
+            An AI platform that accelerates research, project planning, technical documentation, pitch creation,
+            and innovation.
           </motion.p>
 
           {/* Form */}
@@ -206,7 +206,7 @@ export default function HeroPage() {
       {/* Footer */}
       <footer className="border-t border-[#E2E8F0] py-6 text-center">
         <p className="text-xs text-[#94A3B8]">
-          © 2025 MaestroMeets · Built for hackathons ·{' '}
+          © 2025 IntelliGrade AI · Built for hackathons ·{' '}
           <a href="/projects" className="hover:text-[#475569] transition-colors underline-offset-2 hover:underline">
             View History
           </a>

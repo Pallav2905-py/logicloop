@@ -1,8 +1,8 @@
-# MaestroMeets
+# IntelliGrade AI
 
-**Search Less. Solve More.**
+**Think Bigger. Research Faster. Innovate Smarter.**
 
-AI-powered Research & Innovation Copilot that converts a simple project idea into an implementation-ready project.
+An AI platform that accelerates research, project planning, technical documentation, pitch creation, and innovation.
 
 ## Setup
 

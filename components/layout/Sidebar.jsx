@@ -28,7 +28,7 @@ export default function Sidebar({ projectTitle }) {
         <div className="w-7 h-7 bg-[#0F172A] rounded-lg flex items-center justify-center">
           <Zap className="w-4 h-4 text-white" />
         </div>
-        <span className="font-bold text-[#0F172A] text-base tracking-tight">MaestroMeets</span>
+        <span className="font-bold text-[#0F172A] text-base tracking-tight">IntelliGrade AI</span>
       </div>
 
       {/* New Project CTA */}
@@ -73,7 +73,7 @@ export default function Sidebar({ projectTitle }) {
 
       {/* Footer */}
       <div className="px-4 py-4 border-t border-[#E2E8F0]">
-        <p className="text-xs text-[#94A3B8]">© 2025 MaestroMeets</p>
+        <p className="text-xs text-[#94A3B8]">© 2025 IntelliGrade AI</p>
       </div>
     </aside>
   );

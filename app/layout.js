@@ -9,13 +9,14 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'MaestroMeets — Search Less. Solve More.',
+  title: 'IntelliGrade AI — Think Bigger. Research Faster. Innovate Smarter.',
   description:
-    'Turn any project idea into an implementation-ready solution powered by AI. Get idea validation, architecture diagrams, tech stack recommendations, and a full sprint roadmap instantly.',
+    'An AI platform that accelerates research, project planning, technical documentation, pitch creation, and innovation.',
   keywords: ['AI research', 'project planning', 'innovation', 'architecture', 'roadmap'],
   openGraph: {
-    title: 'MaestroMeets — Search Less. Solve More.',
-    description: 'AI-powered Research & Innovation Copilot for builders.',
+    title: 'IntelliGrade AI — Think Bigger. Research Faster. Innovate Smarter.',
+    description:
+      'An AI platform that accelerates research, project planning, technical documentation, pitch creation, and innovation.',
     type: 'website',
   },
 };
