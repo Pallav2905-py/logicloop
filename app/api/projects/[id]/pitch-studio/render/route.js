@@ -43,11 +43,4 @@ export async function POST(request, { params }) {
   }
 }
 
-// Increase body size limit for large base64 image payloads
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '50mb',
-    },
-  },
-};
+// Body size limit is handled by Next.js defaults or next.config.mjs in App Router.
